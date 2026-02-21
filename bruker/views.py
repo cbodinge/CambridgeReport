@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import io
 from django.http import HttpRequest, JsonResponse, HttpResponse
 from django.views.decorators.http import require_POST
@@ -24,3 +24,7 @@ def ingest(request: HttpRequest) -> JsonResponse:
     #     ingested += 1
 
     return JsonResponse({"filename": uploaded.name, "ingested_lines": ingested})
+
+
+def documentation(request: HttpRequest) -> HttpResponse:
+    return redirect('https://cbodinge.github.io/CambridgeReport/')

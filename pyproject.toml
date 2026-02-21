@@ -5,4 +5,28 @@ description = "Add your description here"
 requires-python = ">=3.14"
 dependencies = [
     "django>=6.0.2",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.7.2",
+    "mkdocstrings[python]>=1.0.3",
+    "ruff>=0.15.2",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "W",    # warnings
+    "I",    # import sorting
+    "D",    # pydocstyle (docstring enforcement)
+]
+
+ignore = [
+    "D100",  # missing module docstring (optional)
+    "D104",  # missing package docstring
+]
+
+[tool.ruff.pydocstyle]
+convention = "google"
