@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cambridge Isotope x PinPoint Reporting</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" action="{% url 'ingest' %}">
+  {% csrf_token %}
+  <input type="file" name="file" required />
+  <button type="submit">Ingest</button>
+</form>
+</body>
+</html>
