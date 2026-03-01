@@ -5,9 +5,13 @@ description = "Add your description here"
 requires-python = ">=3.14"
 dependencies = [
     "django>=6.0.2",
+    "lxml>=6.0.2",
     "mkdocs>=1.6.1",
     "mkdocs-material>=9.7.2",
     "mkdocstrings[python]>=1.0.3",
+    "numpy>=2.4.2",
+    "psvg>=0.2.9",
+    "pygraphing>=1.0.3",
     "ruff>=0.15.2",
 ]
 
